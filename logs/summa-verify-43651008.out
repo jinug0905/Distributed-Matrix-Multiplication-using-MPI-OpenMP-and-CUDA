@@ -1,0 +1,8 @@
+CC -O3 -std=c++17 -Iinclude -fopenmp -I/opt/cray/pe/mpich/8.1.30/ofi/gnu/12.3/include build/cpu/main.o build/cpu/summa_cpu.o build/cpu/local_dgemm_cpu.o build/cpu/verify.o -o summa
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+== CPU VERIFY ==
+N=1000  P=4  OMP_NUM_THREADS=8
+Opts: N=1000 mode=cpu verify=1
+[VERIFY] max |C - Cref| = 0
+[VERIFY] PASS (tol=1e-05)
